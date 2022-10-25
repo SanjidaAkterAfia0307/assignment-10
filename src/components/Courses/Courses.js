@@ -8,13 +8,13 @@ const Courses = () => {
     console.log(courses)
     
     return (
-        <div  className='flex flex-col lg:flex-row'>
-            <div>
+        <div  className='flex flex-col lg:flex-row pt-24'>
+            <div  className="">
 
                <SideBar courses={courses}></SideBar>
 
             </div>
-            <div className='grid grid-cols-2 lg:grid-cols-1 w-full'>
+            <div className='lg:grid grid-cols-2 lg:grid-cols-1 w-full '>
                 {
                     courses.map((course)=> <CourseCard course={course} key={course.id}></CourseCard>)
                 }

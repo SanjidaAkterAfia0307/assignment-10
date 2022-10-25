@@ -8,7 +8,7 @@ const SideBar = ({courses}) => {
         
         <div
             className={` ${open ? "w-full md:w-40" : "w-full md:w-60 "
-                } flex flex-col h-screen p- pt-12 bg-white shadow duration-300`}
+                } flex flex-col h-screen p-3 pt-12 bg-white shadow duration-300`}
         >
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
