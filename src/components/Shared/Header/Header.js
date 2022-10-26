@@ -1,28 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from "../../../img/logo.png"
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext)
   const home = useLocation().pathname
+  console.log(home)
 
-  const styles = {
-    pos: {
-      position: home ==="/" ? "fixed" : "static"
-    }
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(er => console.error(er))
   }
+
+  // const styles = {
+  //   pos: {
+  //     position: home === "/" ? "fixed" : "static"
+  //   }
+  // }
 
   const [navbar, setNavbar] = useState(false);
 
 
   return (
-    <nav className={`w-full fixed  shadow-lg ${home ==="/" ? "bg-transparent " : "bg-white"}`} >
+    <nav className={`w-full fixed z-10 shadow-lg ${home === "/" ? "bg-transparent " : "bg-white"} `} >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link to="javascript:void(0)">
+            <Link to="">
               <div className='flex items-center'>
                 <img src={logo} className="w-12 rounded-full" alt="" />
-                <h2 className='text-2xl ml-2 font-semibold text-white'>Quick Jump !</h2>
+                <h2 className='text-2xl ml-2 font-bold text-gray-500 hover:text-indigo-900'>Quick Jump !</h2>
               </div>
             </Link>
             <div className="md:hidden">
@@ -33,7 +42,7 @@ const Header = () => {
                 {navbar ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
+                    className="w-6 h-6 text-gray-900"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -46,7 +55,7 @@ const Header = () => {
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
+                    className="w-6 h-6 text-gray-900"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -76,14 +85,35 @@ const Header = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
+                <Link to="/faq">FAQ</Link>
+              </li>
+              <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
                 <Link to="courses">Courses</Link>
               </li>
-              <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
-                <Link to="/login">Log In</Link>
-              </li>
-              <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
-                <Link to="/register">Sign Up</Link>
-              </li>
+              {user?.uid ?
+
+                <>
+                  <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
+                    <Link onClick={handleLogOut} >Log Out</Link>
+                  </li>
+                  <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
+                    <Link >
+                      <div className="tooltip tooltip-bottom" data-tip={user?.displayName ? user?.displayName : "User"}>
+                        <button ><img className='rounded-full w-10' src={user?.photoURL} alt="" /></button>
+                      </div>
+                    </Link>
+                  </li>
+                </>
+                :
+                <>
+                  <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
+                    <Link to="/login">Log In</Link>
+                  </li>
+                  <li className="text-stone-400 font-semibold text-xl hover:text-indigo-400">
+                    <Link to="/register">Sign Up</Link>
+                  </li>
+                </>
+              }
             </ul>
 
 

@@ -64,9 +64,10 @@ const SideBar = ({courses}) => {
                 <div className="flex-1">
                     <ul className="pt-2 pb-4 space-y-1 text-sm">
                        {
-                        courses.map(course=>  <li className="rounded-sm">
+                        courses.map(course=> 
+                             <li className="rounded-sm">
                         <Link
-                            to=""
+                            to={`/courses/${course.id}`}
                             className="flex items-center p-3 space-x-3 rounded-md"
                         >
                             <img className='w-10 rounded-full' src={course.icon} alt="" />

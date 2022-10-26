@@ -45,7 +45,7 @@ const CourseCardDetails = () => {
                 </div>
 
                 <div>
-                    <Link className='bg-yellow-400 py-3 px-8 md:px-12  rounded-xl text-white font-medium text-xl'>Get The Premium <FaArrowRight className='inline'></FaArrowRight></Link>
+                    <Link to={`/courses/checkout/${id}`} className='bg-yellow-400 py-3 px-8 md:px-12  rounded-xl text-white font-medium text-xl'>Get The Premium <FaArrowRight className='inline'></FaArrowRight></Link>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@ const CourseCardDetails = () => {
                 <h3 className='md:text-3xl text-center text-xl font-semibold mb-12 text-cyan-800'>More About The Course</h3>
                 <p className="font-medium"><span className='font-bold text-sky-600'><FaComment className='inline mr-2'></FaComment> Course Name :</span> {title}</p>
                 <div className="divider"></div> 
-                <p className="font-medium"><span className='font-bold text-sky-600'><FaMoneyCheckAlt className='inline mr-2'></FaMoneyCheckAlt> Course Purchases :</span> {cost}</p>
+                <p className="font-medium"><span className='font-bold text-sky-600'><FaMoneyCheckAlt className='inline mr-2'></FaMoneyCheckAlt> Course Purchases :</span> {cost.offer} <small className='bg-sky-500 rounded-2xl p-2 text-white font-semibold'>{cost.off}% off </small><span className='line-through'>{cost.general}</span></p>
                 <div className="divider"></div> 
                 <p className="font-medium"><span className='font-bold text-sky-600'><FaUserTie className='inline mr-2'></FaUserTie> Instructor :</span>  {teacher.name}</p>
                 <div className="divider"></div> 

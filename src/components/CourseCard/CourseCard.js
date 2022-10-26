@@ -5,6 +5,7 @@ import { FaStar,FaStarHalfAlt } from 'react-icons/fa';
 const CourseCard = ({ course }) => {
     // console.log(course)
     const { id, title, details, img, teacher,rating } = course
+    
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl lg:grid grid-cols-4 lg:w-3/4 lg:h-72  my-12 lg:mx-auto m-10">
             <figure><img className='h-full rounded-t-xl lg:rounded-l-xl' src={img} alt="Movie" /></figure>
