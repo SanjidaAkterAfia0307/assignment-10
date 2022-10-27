@@ -30,6 +30,7 @@ const Register = () => {
             .then(res => {
                 const user = res.user;
                 handleUpdateUser(name, photo)
+                setError("")
                 navigate("/")
                 window.location.reload()
 
