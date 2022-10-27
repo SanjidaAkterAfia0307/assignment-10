@@ -8,6 +8,8 @@ import { ThemeProvider } from './components/AuthProvider/ThemeContext';
 import Background from './components/Background';
 import ThemeToggle from './components/ThemeToggle';
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

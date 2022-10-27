@@ -1,16 +1,44 @@
 import React from 'react';
-import { FaStar, FaStarHalfAlt,FaArrowRight,FaUserTie,FaUserEdit,FaBook,FaComment,FaStackExchange,FaMoneyCheckAlt,FaSmile } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt,FaArrowRight,FaUserTie,FaUserEdit,FaBook,FaComment,FaStackExchange,FaMoneyCheckAlt,FaSmile,FaDownload } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+
+import jsPDF from "jspdf";
 
 
 const CourseCardDetails = () => {
     const course = useLoaderData()
     console.log(course)
     const { id, title, details, img, teacher, rating,tutorials,students,view,cost } = course
+    
+    
+        
+        
+    
+      const  jsPdfGenerator=()=>{
+            var doc =new jsPDF('p','pt')
+    
+            doc.text(20,20,`Course Name : ${title}`)
+
+            doc.setFont("bold")
+            doc.text(20,40,`rating :${rating}`)
+            doc.text(20,60,`teacher: ${teacher.name}`)
+            doc.text(20,80,`course fee : ${cost.general}`)
+            doc.text(20,100,`course offer : ${cost.off}%`)
+            doc.text(20,120,`students : ${students}`)
+            doc.text(20,140,`lecture : ${tutorials}`)
+            doc.text(20,180,`details :${details.slice(0,70)}`)
+           
+            doc.save("generated.pdf")
+        }
+    
+        
+           
+        
+    
     return (
         <div className='lg:p-64 p-6 pt-36  flex flex-col lg:flex-row justify-between '>
             <div className='w-full lg:w-3/5 mb-20 lg:mb-0'>
-                <h1 className='text-5xl mb-12 text-slate-600 font-bold'>Welcome to our {title} course !</h1>
+                <h1 className='text-5xl mb-12 text-slate-600 font-bold'>Welcome to our {title} course ! <button className='text-lg ' onClick={jsPdfGenerator}>Download PDF<FaDownload className='inline ml-2'></FaDownload></button> </h1>
 
                 <div className='flex flex-col md:flex-row  justify-between'>
                     <div className='flex mb-6  items-center'>
