@@ -5,7 +5,7 @@ const Checkout = () => {
     const course=useLoaderData()
     const { id, title, details, img, teacher, rating,tutorials,students,view,cost } = course
     return (
-        <div className='p-6  lg:p-36 lg:grid grid-cols-5 gap-12'>
+        <div className='p-6 pt-36 lg:p-36 lg:grid grid-cols-5 gap-12'>
             <div className='col-span-3 mb-12 ' >
                 <form className=' shadow-lg rounded-2xl p-4 md:p-20'>
 

@@ -73,7 +73,7 @@ const CourseCardDetails = () => {
                 </div>
 
                 <div>
-                    <Link to={`/courses/checkout/${id}`} className='bg-yellow-400 py-3 px-8 md:px-12  rounded-xl text-white font-medium text-xl'>Get The Premium Access<FaArrowRight className='inline'></FaArrowRight></Link>
+                    <Link to={`/courses/checkout/${id}`} className='bg-yellow-400 py-3 px-2 md:px-12  rounded-xl text-white font-medium text-xl'>Get The Premium Access<FaArrowRight className='inline'></FaArrowRight></Link>
                 </div>
             </div>
 

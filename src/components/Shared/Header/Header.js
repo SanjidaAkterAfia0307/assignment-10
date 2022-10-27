@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from "../../../img/logo.png"
+import logo from "../../../img/logo1.png"
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FaStar } from 'react-icons/fa';
 import ThemeToggle from '../../ThemeToggle';

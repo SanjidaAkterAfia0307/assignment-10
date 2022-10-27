@@ -9,7 +9,7 @@ const FAQ = () => {
 
                 
                     <div className="w-full px-8 mx-auto mt-10 space-y-2 shadow-lg rounded-xl border-4 lg:w-2/3">
-                        <details className="p-6  pb-12 rounded-lg border-b-2">
+                        <details className="md:p-6 p-2  pb-12 rounded-lg border-b-2">
                             <summary className="font-bold text-xl">What is the difference between Compiler and Interpreter ?</summary>
                             <div className="mt-3">
                                 <p className="text-lg text-justify leading-6 text-gray-600">
@@ -17,7 +17,7 @@ const FAQ = () => {
                                 </p>
                             </div>
                         </details>
-                        <details className="p-6  pb-12 rounded-lg border-b-2">
+                        <details className="md:p-6 p-2  pb-12 rounded-lg border-b-2">
                             <summary className="font-bold text-xl">
                             What is the difference between Web Development and Software Development ?
                             </summary>
@@ -27,7 +27,7 @@ const FAQ = () => {
                                 </p>
                             </div>
                         </details>
-                        <details className="p-6  pb-12 rounded-lg border-b-2">
+                        <details className="md:p-6 p-2  pb-12 rounded-lg border-b-2">
                             <summary className="font-bold text-xl">
                                 Can I learn programming in 1 month ?
                             </summary>
@@ -37,7 +37,7 @@ const FAQ = () => {
                                 </p>
                             </div>
                         </details>
-                        <details className="p-6  pb-12 rounded-lg border-b-2">
+                        <details className="md:p-6 p-2  pb-12 rounded-lg border-b-2">
                             <summary className="font-bold text-xl">
                                 How much can a web developer earn ?
                             </summary>
@@ -47,7 +47,7 @@ const FAQ = () => {
                                 </p>
                             </div>
                         </details>
-                        <details className="p-6  pb-12 rounded-lg border-b-2">
+                        <details className="md:p-6 p-2  pb-12 rounded-lg border-b-2">
                             <summary className="font-bold text-xl">
                                 What is Web Development ?
                             </summary>
