@@ -5,8 +5,6 @@ import SideBar from '../SideBar/SideBar';
 
 const Courses = () => {
     const courses = useLoaderData()
-    console.log(courses)
-
    
     return (
         <div  className='flex flex-col md:flex-row pt-24'>

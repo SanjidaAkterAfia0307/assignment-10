@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const SideBar = ({courses}) => {
     const [open, setOpen] = useState(false);
-    console.log(courses)
     return (
         
         <div

@@ -7,7 +7,6 @@ import jsPDF from "jspdf";
 
 const CourseCardDetails = () => {
     const course = useLoaderData()
-    console.log(course)
     const { id, title, details, img, teacher, rating,tutorials,students,view,cost } = course
     
     

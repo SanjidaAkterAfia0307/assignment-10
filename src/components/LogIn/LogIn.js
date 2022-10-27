@@ -26,13 +26,12 @@ const LogIn = () => {
         const email=form.email.value;
 
         const password=form.password.value
-        console.log(email,password)
+
 
         signInUser(email,password)
         .then(res=>{
             const user=res.user;
-            console.log(user)
-            console.log(error)
+            
             setError("")
             console.log(from)
             navigate(from, {replace:true})
@@ -41,10 +40,7 @@ const LogIn = () => {
             setError(er.message)
             console.log(error)
         })
-        // .finally(()=>{
-        //     setLoading(false)
-        // })
-
+        
     }
 
     
