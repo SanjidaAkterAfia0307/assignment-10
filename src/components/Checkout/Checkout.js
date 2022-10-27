@@ -26,13 +26,13 @@ const Checkout = () => {
 
                     </div>
                     <div className='flex justify-between py-10 items-center'>
-                        <div class="flex items-center mb-4">
-                            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-indigo-600 bg-gray-100 rounded border-gray-300" />
-                            <label for="default-checkbox" class="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Credit Card</label>
+                        <div className="flex items-center mb-4">
+                            <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-indigo-600 bg-gray-100 rounded border-gray-300" />
+                            <label htmlFor="default-checkbox" className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Credit Card</label>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-indigo-600 bg-gray-100 rounded border-gray-300" />
-                            <label for="default-checkbox" class="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Paypal</label>
+                        <div className="flex items-center mb-4">
+                            <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-indigo-600 bg-gray-100 rounded border-gray-300" />
+                            <label htmlFor="default-checkbox" className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">Paypal</label>
                         </div>
                     </div>
 

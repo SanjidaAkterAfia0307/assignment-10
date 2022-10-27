@@ -37,13 +37,14 @@ const Blog = () => {
 
                         All of these can save you a significant amount of development cost, as you don't need to pay as high as developing from scratch. Firebase pricing is equally flexible. Although there are pay-as-you-go services, you can start on a free plan and use primary features if your app is still at its prime.
                         <br /><br />
+                        </p>
                         <span className='font-semibold'>Here are the alternatives of Firebase:</span>
                         <ol className='list-disc pl-8'>
                             <li>Parse</li>
                             <li>Back4App</li>
                             <li>MongoBD etc.</li>
                         </ol>
-                    </p>
+                    
                 </div>
                 <div className='shadow-xl rounded-xl p-6'>
                     <h3 className='text-center mb-3    text-xl lg:text-3xl  font-bold'>What is Node? How does Node work?</h3>

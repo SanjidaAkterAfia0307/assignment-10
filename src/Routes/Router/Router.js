@@ -25,17 +25,17 @@ export const router=createBrowserRouter([
             {
                 path:"/courses",
                 element:<Courses></Courses>,
-                loader:()=>fetch(`http://localhost:5000/courses`)
+                loader:()=>fetch(`https://assignment-10-server-sanjidaakterafia0307.vercel.app/courses`)
             },
             {
                 path:"/courses/:id",
                 element:<CourseCardDetails></CourseCardDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`)
+                loader:({params})=>fetch(`https://assignment-10-server-sanjidaakterafia0307.vercel.app/courses/${params.id}`)
             },
             {
                 path:"/courses/checkout/:id",
                 element:<PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/courses/checkout/${params.id}`)
+                loader:({params})=>fetch(`https://assignment-10-server-sanjidaakterafia0307.vercel.app/courses/checkout/${params.id}`)
             },
             {
                 path:"/blog",
