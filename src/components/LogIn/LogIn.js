@@ -54,22 +54,17 @@ const LogIn = () => {
             {
                 !close &&
             <div className='shadow-lg absolute md:p-5 p-1 rounded-md top-20 md:right-10'>
-                {/* <div className='relative'> */}
+                
                 <div className='flex justify-end ' onClick={()=>setClose(true)}>
 
                     <p className='rounded-full px-2 bg-slate-200'>X</p>
                 </div>
                     <div>
-                        <h3 className='font-semibold'>Seller Id</h3>
+                        <h3 className='font-semibold'>Id</h3>
                         <p>Email: sanjida@gmail.com</p>
                         <p>Password: 142536</p>
                     </div>
-                    <div>
-                        <h3 className='font-semibold'>Buyer Id</h3>
-                        <p>Email: afia@gmail.com</p>
-                        <p>Password: 142536</p>
-                    </div>
-                {/* </div> */}
+               
             </div>
             }
 
