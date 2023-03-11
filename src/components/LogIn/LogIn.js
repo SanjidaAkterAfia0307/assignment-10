@@ -7,6 +7,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 const LogIn = () => {
     const {user , createGoogleUser,createUser,signInUser,createGitHubUser,setLoading}=useContext(AuthContext)
     const [error,setError]=useState('')
+    const [close,setClose]=useState('')
     const navigate=useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
@@ -50,8 +51,29 @@ const LogIn = () => {
             <div className='hidden lg:block'>
                 <img src={lockPhone} alt="" />
             </div>
+            {
+                !close &&
+            <div className='shadow-lg absolute md:p-5 p-1 rounded-md top-20 md:right-10'>
+                {/* <div className='relative'> */}
+                <div className='flex justify-end ' onClick={()=>setClose(true)}>
 
-            <div className='lg:my-auto lg:p-12 p-10 md:p-20'>
+                    <p className='rounded-full px-2 bg-slate-200'>X</p>
+                </div>
+                    <div>
+                        <h3 className='font-semibold'>Seller Id</h3>
+                        <p>Email: sanjida@gmail.com</p>
+                        <p>Password: 142536</p>
+                    </div>
+                    <div>
+                        <h3 className='font-semibold'>Buyer Id</h3>
+                        <p>Email: afia@gmail.com</p>
+                        <p>Password: 142536</p>
+                    </div>
+                {/* </div> */}
+            </div>
+            }
+
+            <div className='lg:my-auto lg:p-12 p-10 mt-32 md:p-20'>
                 <h2 className='text-center text-3xl md:text-4xl font-bold pb-12 '>Log In to join Now !</h2>
                 <form onSubmit={handleUser} className=' shadow-lg rounded-2xl p-4 md:p-20'>
                   

@@ -19,7 +19,7 @@ const Header = () => {
 
 
   return (
-    <nav className='w-full fixed z-10 shadow-lg bg-white ' >
+    <nav className='w-full fixed  shadow-lg bg-white ' >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
